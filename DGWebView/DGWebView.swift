@@ -55,7 +55,7 @@ public class DGWebView: UIViewController {
                 if let configuratiion  = config {
                    self.webView = WKWebView(frame: self.frame, configuration: configuratiion)
                     self.view.addSubview(self.webView)
-                    let url = URL(string: "https://www.fedway.com/wps/myportal/hidden/mobi/pwshipment")
+                    let url = URL(string: self.url)
                     let request = URLRequest(url: url!)
                     self.webView.load(request)
                     
