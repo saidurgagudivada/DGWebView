@@ -13,13 +13,14 @@ public class DGWebView: UIViewController {
     var token = ""
     var frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     var vc:  UIViewController?
+    var url = ""
     
-    public init(token: String) {
+    public init(token: String, url: String) {
         self.token = token
+        self.url = url
         super.init(nibName: nil, bundle: nil)
         DispatchQueue.global(qos: .background).async {
             self.addWebView()
-            
         }
     }
 
@@ -33,8 +34,7 @@ public class DGWebView: UIViewController {
         self.view.backgroundColor = .yellow
         DispatchQueue.global(qos: .background).async {
             self.addWebView()
-
-               }
+            }
     }
     
     private func addWebView(){
