@@ -31,7 +31,6 @@ public class DGWebView: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = .yellow
         DispatchQueue.global(qos: .background).async {
             self.addWebView()
             }
